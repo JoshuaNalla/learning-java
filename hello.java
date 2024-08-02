@@ -10,9 +10,14 @@ class hello
         System.out.println("what is your name?");
         String name = scanner.nextLine();
         System.out.println("HI " + name + ", My name is junior");
+        secondfunction();
     
     
-    
+    }
+
+    public static void secondfunction ()
+    {
+        System.out.println("whats good, this is the second function");
     }
 }
 
