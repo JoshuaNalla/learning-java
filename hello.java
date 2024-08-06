@@ -1,24 +1,22 @@
 import java.util.Scanner;
 
-class hello
-{
-
-    public static void main (String arg[])
-    {
-        System.out.println("hello world");
+public class hello {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("what is your name?");
-        String name = scanner.nextLine();
-        System.out.println("HI " + name + ", My name is junior");
-        secondfunction();
-    
-    
-    }
 
-    public static void secondfunction ()
-    {
-        System.out.println("whats good, this is the second function");
+        System.out.println("What number do you want: ");
+        int n = scanner.nextInt();
+
+        switch (n) {
+            case 1:
+                System.out.print("It's Monday!");
+                break;
+            case 2:
+                System.out.print("It's Tuesday");
+                break;
+            default:
+                System.out.print("Get your facts straight, cuh");
+                break;
+        }
     }
 }
-
-
