@@ -30,13 +30,14 @@ public class hello {
             try{
                 return sc.nextInt(); // when this return statement wont work, it will trigger the catch mechanism to catch the exception
             }
-            catch (InputMismatchException e) // if the exception matches this type, then the catch block is triggered
+            catch (Exception e) // this general exception catches all types of exceptions and the body will do the same thing 
+            // for any kind of exception
             {
                 sc.next(); // this takes the input, that was not accepted, and then disposes of it? it just wont be a prob no more
                 System.out.println("whoops, pls enter a valid number yo"); // prints out the error msg and reruns the loop
             }
         }
-    }
+    } 
 }
 
 // diff
