@@ -1,22 +1,42 @@
-import java.util.Scanner;
+import java.util.*;
+
+//switch statement, remember the class has to be same as the file name class.java, public class class(parameters)
+
+// this time im accounting for exceptions, what if five is entered instead of '5'
 
 public class hello {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("What number do you want: ");
-        int n = scanner.nextInt();
-
+        System.out.print("What number do you want: ");
+        int n = getint();
+        // added this exception so i can account for if a wrong input is entered at first
         switch (n) {
             case 1:
-                System.out.print("It's Monday!");
+                System.out.println("It's Monday!");
                 break;
             case 2:
-                System.out.print("It's Tuesday");
+                System.out.println("It's Tuesday");
                 break;
             default:
-                System.out.print("Get your facts straight, cuh");
+                System.out.println("Get your facts straight, cuh");
                 break;
         }
     }
+
+    public static int getint ()
+    {
+        while(true) // this loop will only stop when the return in the try block is successful
+        {
+            try{
+                return sc.nextInt(); // when this return statement wont work, it will trigger the catch mechanism to catch the exception
+            }
+            catch (InputMismatchException e) // if the exception matches this type, then the catch block is triggered
+            {
+                sc.next(); // this takes the input, that was not accepted, and then disposes of it? it just wont be a prob no more
+                System.out.println("whoops, pls enter a valid number yo"); // prints out the error msg and reruns the loop
+            }
+        }
+    }
 }
+
+// diff
