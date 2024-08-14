@@ -57,6 +57,7 @@ public class hello
 // also note when you are creating your own private class within a class folder, you are ineffect creating a new .class file.
 class something
 {
+    // this block of code that isnt in any method or constructor is known as the initializer which 'initializes' all the things that need to be
     private int x;
     private int y;
     // constructor and default constructor
